@@ -38,4 +38,4 @@ Comment.init(
   }
 );
 
-module.exports = Dish;
+module.exports = Comment;

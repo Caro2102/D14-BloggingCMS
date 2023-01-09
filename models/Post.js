@@ -35,4 +35,4 @@ Post.init(
   }
 );
 
-module.exports = Dish;
+module.exports = Post;
