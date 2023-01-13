@@ -13,7 +13,7 @@ Comment.init(
     },
     commentText: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -29,9 +29,14 @@ Comment.init(
         key: 'id'
       }
     }, 
+    published_on: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    }
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'comment',

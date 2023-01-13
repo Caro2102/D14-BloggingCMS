@@ -17,7 +17,7 @@ Post.init(
     },
     content: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -26,9 +26,14 @@ Post.init(
         key: 'id'
       }
     }, 
+    published_on: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    }
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'post',
