@@ -1,0 +1,27 @@
+<div class="d-flex py-2 bg-dark px-0">
+    <h2 class="p-1 mb-2 bg-success-subtle text-emphasis-success rounded mx-5"> <strong>Your Dashboard</strong></h2>
+</div>
+ <form id="form-comment" >
+    <div class="card my-3 mx-auto border border-dark w-75">
+        <div class="card-header bg-dark">
+            <div class="container ">
+                <div class="row row-cols-2">
+                    <div class="text-start text-light ">Create New Post</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body bg-success-subtle text-start pt-1">
+            <p class="fs-5 text-start my-1">Title</p>
+            <input type="text" class="form-control" id="title" >
+            <p class="fs-5 text-start my-1">Comment</p>
+            <div class="form-floating ">
+                <textarea class="form-control py-1" id="content"  style="height: 100px"></textarea>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-secondary mt-3" id="btnCreate">Create</button>
+            </div>
+        </div>
+    </div>
+ </form>
+ 
+<script src="/js/add.js"></script>
