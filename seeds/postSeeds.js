@@ -1,5 +1,7 @@
+//Importar modelo de Post
 const { Post } = require('../models');
 
+//Definir datos a llenar en la tabla Post
 const postdata = [
   {
     title: 'Why MVC is so important',
@@ -21,6 +23,6 @@ const postdata = [
   },
 ];
 
-const seedPost = () => Post.bulkCreate(postdata);
+const seedPost = () => Post.bulkCreate(postdata);//Función para crear todas las entradas en la base de datos
 
-module.exports = seedPost;
+module.exports = seedPost;//Exportar función para crear seeds en la tabla de client

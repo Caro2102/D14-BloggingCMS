@@ -1,5 +1,6 @@
+//Importar modelo de Comment
 const { Comment } = require('../models');
-
+//Definir datos a llenar en la tabla Comment
 const commentdata = [
   {
     commentText: 'Thank you very much for the explanation., now I understand',
@@ -29,5 +30,5 @@ const commentdata = [
   
 ];
 
-const seedComment = () => Comment.bulkCreate(commentdata);
-module.exports = seedComment;
+const seedComment = () => Comment.bulkCreate(commentdata);//Función para crear todas las entradas en la base de datos
+module.exports = seedComment;//Exportar función para crear seeds en la tabla de client

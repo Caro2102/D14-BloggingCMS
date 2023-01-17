@@ -1,5 +1,7 @@
+//Importar modelo de User
 const { User } = require('../models');
 
+//Definir datos a llenar en la tabla user
 const userdata = [
   {
     name: 'Xandromus',
@@ -18,9 +20,9 @@ const userdata = [
   
 ];
 
-const seedUser = () => User.bulkCreate(userdata,{
-  individualHooks: true,
+const seedUser = () => User.bulkCreate(userdata,{//Función para crear todas las entradas en la base de datos 
+  individualHooks: true,//Incluir hooks para hacer hash de la contraseña
   returning: true,
 });
 
-module.exports = seedUser;
+module.exports = seedUser;//Exportar función para crear seeds en la tabla de user
