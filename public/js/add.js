@@ -1,10 +1,10 @@
 async function addPost(event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value;
-    const content = document.querySelector('#content').value;
-      const response = await fetch(`/dashboard/`, {
+    const title = document.querySelector('#title').value; //Obtener titulo del post
+    const content = document.querySelector('#content').value;//Obtener contenido del post
+      const response = await fetch(`/dashboard/`, { //Fetch /dashboard/ con método POST para craer un nuevo post  
       method: 'POST',
-      body: JSON.stringify({
+      body: JSON.stringify({ 
         title:title,
         content:content,
         published_on:new Date(),
@@ -24,5 +24,6 @@ async function addPost(event) {
 
     }
   }
+  //Agregar al boton la funcion para crear post
   document.querySelector('#form-comment').addEventListener('submit', addPost);
   

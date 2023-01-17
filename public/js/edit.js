@@ -1,14 +1,14 @@
-// window.location nos da acceso a la URL. Luego, usamos el método .split() para acceder al número al final de la URL y establecerlo igual al identificador.
+//Obtener id de la URL
 const id = window.location.toString().split('/')[
 window.location.toString().split('/').length - 1
 ];
-
+//Función para moficar post 
 async function updatePost(event) {
     event.preventDefault();
-    const nTitle = document.getElementById('title').value;
-    const nContent = document.getElementById('postText').value;
+    const nTitle = document.getElementById('title').value;//Obtener titulo del post
+    const nContent = document.getElementById('postText').value;//Obtener contenido del post
     
-    const response = await fetch(`/dashboard/${id}`,{
+    const response = await fetch(`/dashboard/${id}`,{//Fetch /dashboard/id con método PUT para modificar un post  
       method: 'PUT',
       body: JSON.stringify({
         title: nTitle,
@@ -19,18 +19,17 @@ async function updatePost(event) {
       },
     });
    
-
     if (response.ok) {
       document.location.replace(`/dashboard`);
     } else {
       alert('Failed to edit post');
     }
 }
-
+//Función para eliminar post 
   async function deletePost(event) {
     event.preventDefault();
    
-    const response = await fetch(`/dashboard/${id}`, {
+    const response = await fetch(`/dashboard/${id}`, {//Fetch /dashboard/id con método DELETE para eliminar un post  
       method: 'DELETE',
     });
   
@@ -40,6 +39,7 @@ async function updatePost(event) {
       alert('Failed to edit post');
     }
   }
-
+  //Agregar al boton la funcion para modificar post
   document.querySelector('#btnUpdate').addEventListener('click', updatePost);
+  //Agregar al boton la funcion para eliminar post
   document.querySelector('#btnDelete').addEventListener('click', deletePost);

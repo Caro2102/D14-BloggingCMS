@@ -1,15 +1,16 @@
+//Función para cerrar sesión
 const logout = async () => {
-  const response = await fetch('/api/users/logout', { //Fetch /api/users/logout with POST method to logout
+  const response = await fetch('/api/users/logout', { //Fetch /api/users/logout con método POST para cerrar sesión
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
   });
 
-  if (response.ok) { //If response was ok
-    document.location.replace('/'); //Go back to Home
+  if (response.ok) { //Si la respuest está bien
+    document.location.replace('/'); //Regresar a Home
   } else { //If not
-    alert('Failed to log out.'); //Send alert
+    alert('Failed to log out.'); 
   }
 };
 
-//Add event handler when clicking logout button
-document.querySelector('#btnLogout').addEventListener('click', logout);
+  //Agregar al boton la funcion para cerrar sesión
+  document.querySelector('#btnLogout').addEventListener('click', logout);

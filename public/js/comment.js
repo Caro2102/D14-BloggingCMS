@@ -1,12 +1,13 @@
-// window.location nos da acceso a la URL. Luego, usamos el método .split() para acceder al número al final de la URL y establecerlo igual al identificador.
+//Obtener id de la URL
 const id = window.location.toString().split('/')[
   window.location.toString().split('/').length - 1
 ];
 
 async function addComment(event) {
     event.preventDefault();
-    const newCommentText = document.getElementById('commentText').value;
-    const response = await fetch(`/`, {
+    const newCommentText = document.getElementById('commentText').value;//Obtener contenido del comentario
+    const response = await fetch(`/`, { //Fetch / con método POST para craer un nuevo comentario  
+      method: 'POST',
       method: 'POST',
       body: JSON.stringify({
         commentText:newCommentText,
@@ -23,7 +24,7 @@ async function addComment(event) {
     } else {
       alert('Failed to add comment');
     }
-}
+}  //Agregar al boton la funcion para crear comentario
 document.querySelector('#form-comment').addEventListener('submit', addComment);
 
   
