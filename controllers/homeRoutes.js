@@ -1,5 +1,8 @@
+//Importar router de express
 const router = require('express').Router();
+//Importar los modelos User, Comment y Post
 const { Post, Comment,User } = require('../models');
+//Importar la función para validar la autorización
 const withAuth = require("../utils/auth");
 
 
@@ -81,7 +84,7 @@ router.post('/',withAuth, async (req, res) => {
 
     }
 });
-
+//Ruta de inicio de sesion
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) { 
     res.redirect('/'); 

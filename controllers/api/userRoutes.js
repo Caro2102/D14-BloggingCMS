@@ -1,7 +1,9 @@
+//Importar router de express
 const router = require('express').Router();
+//Importar el modelo User
 const { User } = require('../../models');
 
-// CREATE un nuevo usuario
+//Ruta para crear un nuevo usuario
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -20,7 +22,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Iniciar sesión
+//Ruta para iniciar sesión
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -59,7 +61,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Cerrar sesión
+//Ruta para cerrar sesión
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
