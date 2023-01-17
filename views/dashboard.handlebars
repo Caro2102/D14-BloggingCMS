@@ -1,0 +1,11 @@
+<div class="d-flex py-2 bg-dark px-0">
+    <h2 class="p-1 mb-2 bg-success-subtle text-emphasis-success rounded mx-5"> <strong>Your Dashboard</strong></h2>
+</div>
+ <div class="container">
+{{#each posts as |post|}}
+    {{> userPost-details}}
+{{/each}}
+</div>
+<footer class="fixed-bottom mx-auto d-flex justify-content-center">
+    <a href="/dashboard/addPost" type="button" class="btn btn-dark px-4 my-3 "><i class="fa-solid fa-plus"></i> New Post </a>
+</footer>
