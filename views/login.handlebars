@@ -1,0 +1,43 @@
+<form id="login-form">
+  <div class="card my-3 mx-auto border border-dark w-75 d-block" id="cardLogin">
+    <div class="card-header bg-dark">
+        <div class="container ">
+            <div class="row row-cols-2">
+                <div class="col text-start text-light" ><h5>Login</h5></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-success-subtle text-start">
+      <p class="fs-5 text-start text-dark">Username</p>
+      <input type="text" class="form-control" id="username-login" >
+      <p class="fs-5 text-start text-dark">Password</p>
+      <input type="text" class="form-control" id="password-login">
+      <div class="d-grid gap-2">
+          <button class="btn btn-secondary mt-2"id="btnLogin" type="submit">Login!</button>
+        </div>
+        <p class="fs-5 text-start text-primary m-1" id="changeLogin" style="cursor: pointer;">Sign Up instead</p>
+      </div>
+  </div>
+</form>
+<form id="signup-form">
+  <div class="card my-3 mx-auto border border-dark w-75 d-none"id="cardSignUp">
+    <div class="card-header bg-dark">
+        <div class="container ">
+            <div class="row row-cols-2">
+                <div class="col text-start text-light" ><h5>Sign Up</h5></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body bg-success-subtle text-start">
+        <p class="fs-5 text-start text-dark">Username</p>
+        <input type="text" class="form-control" id="username-signup" >
+        <p class="fs-5 text-start text-dark">Password</p>
+        <input type="text" class="form-control" id="password-signup">
+        <div class="d-grid gap-2">
+            <button class="btn btn-secondary mt-2" id="btnSignUp" type="submit">Sign Up!</button>
+          </div>
+          <p class="fs-5 text-start text-primary m-1" id="changeSignUp" style="cursor: pointer;">Login instead</p>
+    </div>
+  </div>
+</form>
+<script src="/js/login.js"></script>
