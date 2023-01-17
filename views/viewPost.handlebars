@@ -17,7 +17,7 @@
 {{#each posts.comments as |comment|}}
     {{> comment-details}}
 {{/each}}
-
+{{#if loggedIn}}
  <form id="form-comment" >
     <div class="card my-3 mx-auto border border-dark w-75">
         <div class="card-header bg-dark">
@@ -39,5 +39,6 @@
         </div>
     </div>
  </form>
+ {{/if}} 
 <script src="/js/comment.js"></script>
  

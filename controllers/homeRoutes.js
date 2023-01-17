@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
 });
 
 //Ruta para obtener un post con todos sus comentarios
-router.get('/post/:id',withAuth, async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
       const orderData = await Post.findOne({ 
           where:{
