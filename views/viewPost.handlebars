@@ -1,0 +1,43 @@
+<div class="d-flex py-2 bg-dark px-0">
+    <h2 class="p-1 mb-2 bg-success-subtle text-emphasis-success rounded mx-5"> <strong>The Tech Blog</strong></h2>
+</div>
+<div class="card my-3 mx-auto border border-dark w-75">
+        <div class="card-header bg-dark">
+            <div class="container ">
+                <div class="row row-cols-2">
+                <div class="col text-start text-light" ><h5>{{posts.title}}</h5></div>
+                <div class="col text-end text-light">Posted by {{posts.user.name}} on {{format_date posts.published_on}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body bg-success-subtle text-start">
+            <p class="fs-5 text-start text-dark">{{posts.content}}</p>
+        </div>
+</div>
+{{#each posts.comments as |comment|}}
+    {{> comment-details}}
+{{/each}}
+
+ <form id="form-comment" >
+    <div class="card my-3 mx-auto border border-dark w-75">
+        <div class="card-header bg-dark">
+            <div class="container ">
+                <div class="row row-cols-2">
+                    <div class="col text-end text-dark" style="cursor: pointer;">.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-body bg-success-subtle text-start pt-1">
+            <p class="fs-5 text-start my-1">Comment</p>
+                <div class="form-floating ">
+                    <textarea class="form-control py-1" id="commentText" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary my-2" id="btnSubmit">Submit</button>
+                </div>
+        </div>
+    </div>
+ </form>
+<script src="/js/comment.js"></script>
+ 
