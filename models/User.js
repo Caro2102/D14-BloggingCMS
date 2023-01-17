@@ -1,13 +1,18 @@
+//Importar Model y DataTypes de sequelize
 const { Model, DataTypes } = require('sequelize');
+//Importar bcrypt
 const bcrypt = require('bcrypt');
+//Importar conexión de sequelize
 const sequelize = require('../config/connection');
 
+//Modelo User extiende el Model de sequelize
 class User extends Model {
+  //Método para verificar la contraseña del usuario
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+//Definir columnas de la tabla user 
 User.init(
   {
     id: {
@@ -28,6 +33,7 @@ User.init(
       },
     },
   },
+  //Definir opciones y hooks
   {
     hooks: {
       beforeCreate: async (newUserData) => {

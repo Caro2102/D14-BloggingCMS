@@ -1,8 +1,12 @@
+//Importar Model y DataTypes de sequelize
 const { Model, DataTypes } = require('sequelize');
+//Importar conexión de sequelize
 const sequelize = require('../config/connection');
 
+//Modelo Comment extiende el Model de sequelize
 class Comment extends Model {}
 
+//Definir columnas de la tabla Comment 
 Comment.init(
   {
     id: {
@@ -34,6 +38,7 @@ Comment.init(
       allowNull: false,
     }
   },
+  //Definir opciones
   {
     sequelize,
     timestamps: false,
