@@ -14,7 +14,7 @@ Sitio de blog estilo CMS, para poder publicar artículos, publicaciones de blogs
 ---
 ## Enlaces
 
-**[Aplicación desplegada ](https://order-manager-application.herokuapp.com/ "click")**.
+**[Aplicación desplegada ](https:// "click")**.
 
 **[URL de repositorio de GitHub](https://github.com/Caro2102/D14-BloggingCMS "click")**.
 
@@ -37,7 +37,7 @@ Sitio de blog estilo CMS, para poder publicar artículos, publicaciones de blogs
 ---
 ## Uso
   
-* Ingresar a la aplicación desplegada en **[Heroku](https://order-manager-application.herokuapp.com/ "click")** o acceder desde el navegador  con la dirección [http://localhost:3001](http://localhost:3001 ) despues de haber ejecutado el archivo como muestra la sección de [Instalación](#instalación).
+* Ingresar a la aplicación desplegada en **[Heroku](https:// "click")** o acceder desde el navegador  con la dirección [http://localhost:3001](http://localhost:3001 ) despues de haber ejecutado el archivo como muestra la sección de [Instalación](#instalación).
 
 * Al ingresar a la aplicación se podran ver las publicaciones existentes en el blog y si se publico alguna después.
 
