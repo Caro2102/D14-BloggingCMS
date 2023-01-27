@@ -10,22 +10,21 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 //Importar express-session
 const session = require('express-session');
-//Importar la conexión de sequelize
-const sequelize = require('./config/connection');
 //Importar connect-session-sequelize
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+const { strict } = require('assert');
+//Importar la conexión de sequelize
+const sequelize = require('./config/connection');
 
 //Inicializar variable app
 const app = express();
 //Definir puerto
 const PORT = process.env.PORT || 3001;
-
 //Configurar sesiones
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    maxAge: 10000, //Cookie expira despues de 15 minutos
+    maxAge: 900000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',
